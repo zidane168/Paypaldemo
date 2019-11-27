@@ -1,0 +1,43 @@
+{
+    "intent": "order",/*    "intent": "sale",*/
+    "payer": {
+        "payment_method": "paypal"
+    },
+    "redirect_urls": {
+        "return_url": "http://localhost/PaypalDemo/RestfulAPIDemo/2_2_return.php",
+        "cancel_url": "http://localhost/PaypalDemo/RestfulAPIDemo/2_3_cancel.php"
+    },
+    "transactions": [
+        {
+            "invoice_number":"1234561",
+            "amount": {
+                "total": "1.00",
+                "currency": "HKD",
+                "details": {
+                    "subtotal": "1.00",
+                    "tax": "0.00",
+                    "shipping": "0.00"
+                }
+            },
+            "description": "This is payment description.",
+            "item_list": { 
+                "items":[
+                    {
+                        "quantity":"5", 
+                        "name":"Hat", 
+                        "price":"0.10",  
+                        "sku":"product12345", 
+                        "currency":"HKD"
+                    },
+                    {
+                        "quantity":"5", 
+                        "name":"Hat", 
+                        "price":"0.10",  
+                        "sku":"product45678", 
+                        "currency":"HKD"
+                    }
+                ]
+            }
+        }
+    ]
+}
